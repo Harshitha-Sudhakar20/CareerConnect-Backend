@@ -1,184 +1,165 @@
-# CareerConnect Backend 🚀
+# CareerConnect 🚀
 
-A secure and scalable **Spring Boot REST API** for a Job Portal application. It provides user authentication using **JWT**, secure password encryption with **BCrypt**, and complete CRUD operations for job management.
+A full-stack Job Application Tracker built with **Spring Boot**, **React**, **MySQL**, and **JWT Authentication**. CareerConnect helps users securely manage and track their job applications through an intuitive dashboard with powerful management features.
 
 ---
 
 ## ✨ Features
 
-- 🔐 User Registration
-- 🔑 User Login with JWT Authentication
-- 🔒 Password Encryption using BCrypt
-- 💼 Create Job
-- 📋 View All Jobs
-- 🔍 View Job by ID
-- ✏️ Update Job Details
-- 🗑️ Delete Job
-- ⚠️ Global Exception Handling
-- 📄 RESTful API Design
-- 🗄️ MySQL Database Integration
-- 📖 Swagger API Documentation
+### 🔐 Authentication
+- User Registration & Login
+- JWT Authentication
+- Password Encryption using BCrypt
+- Protected Routes
+
+### 💼 Job Management
+- Add New Jobs
+- Update Job Details
+- Delete Jobs
+- View All Applications
+- Search Jobs
+- Sort Applications
+- Pagination Support
+
+### 📊 Dashboard
+- Total Applications
+- Applied Jobs
+- Interview Jobs
+- Offer Jobs
+- Rejected Jobs
+- Responsive Dashboard Cards
+
+### 📈 Reports
+- Export Jobs to PDF
+- Export Jobs to Excel
+
+### 🎨 User Interface
+- Responsive Design
+- Bootstrap 5
+- Clean and Modern UI
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠 Tech Stack
 
-- Java 17
+## Frontend
+- React
+- Vite
+- Bootstrap 5
+- Axios
+- React Router DOM
+
+## Backend
 - Spring Boot
 - Spring Security
-- Spring Data JPA (Hibernate)
-- JWT (JSON Web Token)
-- MySQL
+- Spring Data JPA
+- JWT Authentication
 - Maven
-- Swagger / OpenAPI
+
+## Database
+- MySQL
 
 ---
 
-## 📁 Project Structure
+# 📂 Project Structure
 
 ```
-src
-├── main
-│   ├── java
-│   │   └── com.harshitha.careerconnect
-│   │       ├── config
-│   │       ├── controller
-│   │       ├── entity
-│   │       ├── exception
-│   │       ├── repository
-│   │       ├── security
-│   │       └── service
-│   └── resources
-│       └── application.properties
-```
-
----
-
-## 🔐 Authentication APIs
-
-### Register User
-
-```
-POST /users/register
-```
-
-### Login User
-
-```
-POST /users/login
-```
-
-Returns a JWT token that must be included in the Authorization header for protected endpoints.
-
-```
-Authorization: Bearer <your-jwt-token>
+CareerConnect/
+│
+├── src/                         # Spring Boot Backend
+├── pom.xml
+├── careerconnect-frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md
 ```
 
 ---
 
-## 💼 Job APIs
+# ⚙️ Installation
 
-### Create Job
-
-```
-POST /jobs
-```
-
-### Get All Jobs
-
-```
-GET /jobs
-```
-
-### Get Job By ID
-
-```
-GET /jobs/{id}
-```
-
-### Update Job
-
-```
-PUT /jobs/{id}
-```
-
-### Delete Job
-
-```
-DELETE /jobs/{id}
-```
-
----
-
-## ⚙️ Running the Project
-
-### Clone the repository
+## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/Harshitha-Sudhakar20/CareerConnect-Backend.git
+git clone https://github.com/Harshitha-Sudhakar20/CareerConnect.git
+cd CareerConnect
 ```
 
-### Navigate to the project
+---
 
-```bash
-cd CareerConnect-Backend
+## 2️⃣ Backend Setup
+
+Configure your MySQL database inside:
+
+```
+src/main/resources/application.properties
 ```
 
-### Configure MySQL
-
-Update the database configuration in `application.properties`.
-
-### Run the application
+Run the backend:
 
 ```bash
 mvn spring-boot:run
 ```
 
-The application will start on:
+Backend runs at:
 
 ```
-http://localhost:8081
-```
-
----
-
-## 📖 Swagger API Documentation
-
-After running the application, open:
-
-```
-http://localhost:8081/swagger-ui/index.html
+http://localhost:8080
 ```
 
 ---
 
-## 🧪 Tools Used
+## 3️⃣ Frontend Setup
 
-- IntelliJ IDEA
-- Maven
-- MySQL
-- Swagger UI
-- Git
-- GitHub
-- Postman
+```bash
+cd careerconnect-frontend
+npm install
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
 
 ---
 
-## 🚀 Future Enhancements
+# 🔑 API Features
 
-- Job Search
-- Pagination & Sorting
-- Role-Based Authorization (Admin/User)
-- Resume Upload
-- Job Application Module
+- JWT Authentication
+- User Login
+- User Registration
+- CRUD Operations
+- Secure REST APIs
+
+---
+
+# 🚀 Future Enhancements
+
 - Email Notifications
-- Docker Support
-- Cloud Deployment (Render/Railway/AWS)
+- Resume Upload
+- Company Logo Upload
+- Dark Mode
+- Interview Reminder
+- Job Analytics
+- Profile Management
+- Cloud Deployment
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
 **Harshitha Sudhakar**
 
-GitHub: https://github.com/Harshitha-Sudhakar20
+GitHub:
+https://github.com/Harshitha-Sudhakar20
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
