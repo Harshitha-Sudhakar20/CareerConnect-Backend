@@ -31,3 +31,16 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Node.js
+node_modules/
+**/node_modules/
+
+# React
+careerconnect-frontend/node_modules/
+careerconnect-frontend/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

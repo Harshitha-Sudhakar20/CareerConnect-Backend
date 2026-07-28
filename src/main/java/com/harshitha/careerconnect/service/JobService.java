@@ -41,12 +41,16 @@ public class JobService {
         existingJob.setSalary(updatedJob.getSalary());
         existingJob.setJobType(updatedJob.getJobType());
 
+        // New Fields
+        existingJob.setStatus(updatedJob.getStatus());
+        existingJob.setAppliedDate(updatedJob.getAppliedDate());
+        existingJob.setFavorite(updatedJob.getFavorite());
+
         return jobRepository.save(existingJob);
     }
 
     // Delete Job
     public void deleteJob(Long id) {
-
         Job existingJob = getJobById(id);
         jobRepository.delete(existingJob);
     }
