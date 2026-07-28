@@ -138,6 +138,32 @@ http://localhost:5173
 
 ---
 
+## 📸 Screenshots
+
+### Login Page
+![Login](screenshots/loginpage.jpeg)
+
+### Dashboard
+![Dashboard](screenshots/Dashboard.jpeg)
+
+### Add Job
+![Add Job](screenshots/AddJob.jpeg)
+
+### Edit Job
+![Edit Job](screenshots/Edit.jpeg)
+
+### Delete Job
+![Delete Job](screenshots/Delete.jpeg)
+
+### Search
+![Search](screenshots/Searchbar.jpeg)
+
+### PDF Export
+![PDF](screenshots/Pdfdownload.png)
+
+### Excel Export
+![Excel](screenshots/Exceldownload.png)
+
 # 🚀 Future Enhancements
 
 - Email Notifications
