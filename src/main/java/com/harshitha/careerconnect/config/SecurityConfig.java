@@ -57,9 +57,9 @@ public class SecurityConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOriginPatterns(List.of(
-                "http://localhost:*",
-                "https://*.vercel.app"
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173",
+                "https://career-connect-frontend-black.vercel.app"
         ));
 
         configuration.setAllowedMethods(List.of("*"));
