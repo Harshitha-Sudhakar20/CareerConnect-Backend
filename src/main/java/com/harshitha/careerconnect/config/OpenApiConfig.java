@@ -5,8 +5,11 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.servers.Server;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.List;
 
 @Configuration
 public class OpenApiConfig {
@@ -14,13 +17,19 @@ public class OpenApiConfig {
     @Bean
     public OpenAPI customOpenAPI() {
 
-        String securitySchemeName = "bearerAuth";
+        final String securitySchemeName = "bearerAuth";
 
         return new OpenAPI()
                 .info(new Info()
                         .title("CareerConnect API")
                         .version("1.0"))
-                .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
+                .servers(List.of(
+                        new Server()
+                                .url("https://careerconnect-backend-production-28ac.up.railway.app")
+                                .description("Production")
+                ))
+                .addSecurityItem(new SecurityRequirement()
+                        .addList(securitySchemeName))
                 .components(new Components()
                         .addSecuritySchemes(
                                 securitySchemeName,
