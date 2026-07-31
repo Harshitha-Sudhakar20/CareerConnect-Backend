@@ -1,110 +1,80 @@
-# CareerConnect 🚀
+# CareerConnect Backend 🚀
 
-A full-stack Job Application Tracker built with **Spring Boot**, **React**, **MySQL**, and **JWT Authentication**. CareerConnect helps users securely manage and track their job applications through an intuitive dashboard with powerful management features.
+Spring Boot REST API for the CareerConnect Job Application Tracker.
+
+---
+
+## 🌐 API Documentation
+
+Swagger
+
+https://careerconnect-backend-production-8d12.up.railway.app/swagger-ui/index.html
 
 ---
 
 ## ✨ Features
 
-### 🔐 Authentication
-- User Registration & Login
+- User Registration
+- User Login
 - JWT Authentication
-- Password Encryption using BCrypt
-- Protected Routes
-
-### 💼 Job Management
-- Add New Jobs
-- Update Job Details
-- Delete Jobs
-- View All Applications
+- BCrypt Password Encryption
+- Spring Security
+- CRUD Operations
+- Favorite Jobs
 - Search Jobs
-- Sort Applications
-- Pagination Support
-
-### 📊 Dashboard
-- Total Applications
-- Applied Jobs
-- Interview Jobs
-- Offer Jobs
-- Rejected Jobs
-- Responsive Dashboard Cards
-
-### 📈 Reports
-- Export Jobs to PDF
-- Export Jobs to Excel
-
-### 🎨 User Interface
-- Responsive Design
-- Bootstrap 5
-- Clean and Modern UI
+- REST APIs
+- Swagger Documentation
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-## Frontend
-- React
-- Vite
-- Bootstrap 5
-- Axios
-- React Router DOM
-
-## Backend
+- Java 17
 - Spring Boot
 - Spring Security
 - Spring Data JPA
-- JWT Authentication
+- JWT
 - Maven
-
-## Database
 - MySQL
+- Swagger/OpenAPI
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
-CareerConnect/
-│
-├── src/                         # Spring Boot Backend
-├── pom.xml
-├── careerconnect-frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-│
-└── README.md
+src/
+├── main/
+│   ├── java/
+│   ├── resources/
+│   └── ...
+├── test/
+└── pom.xml
 ```
 
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation
 
-## 1️⃣ Clone Repository
+Clone Repository
 
 ```bash
-git clone https://github.com/Harshitha-Sudhakar20/CareerConnect.git
-cd CareerConnect
+git clone https://github.com/Harshitha-Sudhakar20/CareerConnect-Backend.git
 ```
 
----
-
-## 2️⃣ Backend Setup
-
-Configure your MySQL database inside:
+Configure
 
 ```
 src/main/resources/application.properties
 ```
 
-Run the backend:
+Run
 
 ```bash
 mvn spring-boot:run
 ```
 
-Backend runs at:
+Backend runs on
 
 ```
 http://localhost:8080
@@ -112,72 +82,49 @@ http://localhost:8080
 
 ---
 
-## 3️⃣ Frontend Setup
+## 🔑 API Endpoints
 
-```bash
-cd careerconnect-frontend
-npm install
-npm run dev
-```
+### Authentication
 
-Frontend runs at:
+POST `/users/register`
 
-```
-http://localhost:5173
-```
+POST `/users/login`
 
 ---
 
-# 🔑 API Features
+### Jobs
 
-- JWT Authentication
-- User Login
-- User Registration
-- CRUD Operations
-- Secure REST APIs
+GET `/jobs`
 
----
+POST `/jobs`
 
-## 📸 Screenshots
+PUT `/jobs/{id}`
 
-### Login Page
-![Login](screenshots/loginpage.jpeg)
-
-### Dashboard
-![Dashboard](screenshots/Dashboard.jpeg)
-
-### Add Job
-![Add Job](screenshots/AddJob.jpeg)
-
-### Edit Job
-![Edit Job](screenshots/Edit.jpeg)
-
-### Delete Job
-![Delete Job](screenshots/Delete.jpeg)
-
-### Search
-![Search](screenshots/Searchbar.jpeg)
-
-### PDF Export
-![PDF](screenshots/Pdfdownload.png)
-
-### Excel Export
-![Excel](screenshots/Exceldownload.png)
-
-# 🚀 Future Enhancements
-
-- Email Notifications
-- Resume Upload
-- Company Logo Upload
-- Dark Mode
-- Interview Reminder
-- Job Analytics
-- Profile Management
-- Cloud Deployment
+DELETE `/jobs/{id}`
 
 ---
 
-# 👩‍💻 Author
+## 🔗 Frontend Repository
+
+https://github.com/Harshitha-Sudhakar20/CareerConnect-Frontend
+
+---
+
+## 🚀 Deployment
+
+Backend: Railway
+
+Database: Railway MySQL
+
+---
+
+## 📸 Swagger
+
+![Swagger](screenshots/swagger.png)
+
+---
+
+## 👩‍💻 Author
 
 **Harshitha Sudhakar**
 
@@ -186,6 +133,4 @@ https://github.com/Harshitha-Sudhakar20
 
 ---
 
-# ⭐ Support
-
-If you found this project helpful, consider giving it a ⭐ on GitHub.
+⭐ If you found this project helpful, give it a star.
