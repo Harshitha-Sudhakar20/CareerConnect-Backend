@@ -9,6 +9,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(
+        origins = {
+                "http://localhost:5173",
+                "https://career-connect-frontend-black.vercel.app"
+        },
+        allowCredentials = "true"
+)
 public class UserController {
 
     @Autowired
@@ -21,9 +28,6 @@ public class UserController {
 
     @PostMapping("/login")
     public String loginUser(@RequestBody LoginRequest loginRequest) {
-
-        System.out.println("===== LOGIN ENDPOINT REACHED =====");
-
         return userService.loginUser(loginRequest);
     }
 }
