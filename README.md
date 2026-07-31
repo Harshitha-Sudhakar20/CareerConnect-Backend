@@ -131,6 +131,3 @@ Database: Railway MySQL
 GitHub:
 https://github.com/Harshitha-Sudhakar20
 
----
-
-⭐ If you found this project helpful, give it a star.
