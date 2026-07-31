@@ -27,7 +27,7 @@ public class OpenApiConfig {
                         .version("1.0"))
                 .servers(List.of(
                         new Server()
-                                .url("https://careerconnect-backend-production-28ac.up.railway.app")
+                                .url("https://careerconnect-backend-production-8d12.up.railway.app")
                                 .description("Production Server")
                 ))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
